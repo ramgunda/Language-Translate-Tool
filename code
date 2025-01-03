@@ -1,0 +1,20 @@
+# First, make sure you have installed the googletrans library
+# You can install it using: pip install googletrans==4.0.0-rc1
+
+from googletrans import Translator
+
+# Create an instance of the Translator
+translator = Translator()
+
+# Function to translate text from one language to another
+def translate_text(text, src_lang, dest_lang):
+    translation = translator.translate(text, src=src_lang, dest=dest_lang)
+    return translation.text
+
+# Example usage
+source_language = 'en'  # English
+destination_language = 'hi'  # Hindi
+text_to_translate = 'Hello, how are you?'
+
+translated_text = translate_text(text_to_translate, source_language, destination_language)
+print(f'Translated text: {translated_text}')
